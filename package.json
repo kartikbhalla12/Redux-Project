@@ -13,5 +13,9 @@
     "webpack": "4.41.6",
     "webpack-cli": "3.3.11",
     "webpack-dev-server": "^3.11.0"
+  },
+  "dependencies": {
+    "immer": "^7.0.5",
+    "lodash": "^4.17.15"
   }
 }
