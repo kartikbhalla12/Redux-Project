@@ -16,29 +16,29 @@
 
         Some of the benefits of Redux are,
 
-            Predictable State Changes
+            >> Predictable State Changes
 
                 Redux makes state changes predictable and transparent, we can easily see what exactly is going on and how the application state changes in response to every action
 
-            Centralized State
+            >> Centralized State
 
                 Redux centralizes the application state, so all the data our application needs is stored in a single place which is accessible by all parts of the UI.
 
-            Easy Debugging
+            >> Easy Debugging
 
-            Cache or Preserve page state 
+            >> Cache or Preserve page state 
 
-            Implement Undo/Redo Features
+            >> Implement Undo/Redo Features
 
-            Large ecosystem of add-ons
+            >> Large ecosystem of add-ons
 
         All the great features comes at a cost, 
 
-            Complexity
+            >> Complexity
 
                 Redux introduces some complexity in our code since its based on 'Functional Programming' rather than 'Object Oriented Programming'
 
-            Verbosity
+            >> Verbosity
 
                 Redux code is very verbose, we often need to write some boilerplate code to get things done.
 
