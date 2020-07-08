@@ -1,23 +1,11 @@
-import { pipe } from 'lodash/fp';
-import { produce } from 'immer';
+import store from './store';
+import * as actionCreators from './actionCreators';
 
-const input = '    JavaScript    ';
-
-const trim = str => str.trim();
-const toLowerCase = str => str.toLowerCase();
-const wrap = type => str => `<${type}>${str}</${type}>`;
-
-const transform = pipe(trim, toLowerCase, wrap('span'));
-const result = transform(input);
-console.log(result);
-
-let book = { title: 'Harry Potter' };
-
-function publishBook(book) {
-	return produce(book, draftBook => {
-		draftBook.isPublished = true;
-	});
-}
-const updated = publishBook(book);
-
-console.log(book, updated);
+const unsubscribe = store.subscribe(() =>
+	console.log('Store Changed!', store.getState())
+);
+store.dispatch(actionCreators.bugAdded('Bug1'));
+store.dispatch(actionCreators.bugAdded('Bug2'));
+store.dispatch(actionCreators.bugAdded('Bug3'));
+store.dispatch(actionCreators.bugAdded('Bug4'));
+store.dispatch(actionCreators.bugResolved(1));
